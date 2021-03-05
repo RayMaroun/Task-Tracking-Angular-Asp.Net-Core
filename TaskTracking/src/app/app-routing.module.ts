@@ -7,7 +7,7 @@ const routes: Routes = [
     { path: 'tasks', loadChildren: tasksModule },
 
     // otherwise redirect to home
-    { path: '**', redirectTo: '' }
+    { path: '**', redirectTo: 'tasks' }
 ];
 
 @NgModule({

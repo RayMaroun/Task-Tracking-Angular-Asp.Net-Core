@@ -10,6 +10,7 @@ This project is a simple but powerful web application to manage tasks.
 - Code First.
 - Domain-Drive Design
 - Entity Framework
+- `try` `catch` Error Handling
 
 ## Requirements
 

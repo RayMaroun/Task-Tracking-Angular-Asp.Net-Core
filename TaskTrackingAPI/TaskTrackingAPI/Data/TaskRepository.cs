@@ -22,7 +22,7 @@ namespace TaskTrackingAPI.Data
             return await _context.TaskDetails.ToListAsync();
         }
 
-        public async Task<TaskDetails> GetTaskDetail(long TaskDetailId)
+        public async Task<TaskDetails> GetTaskDetail(int? TaskDetailId)
         {
             return await _context.TaskDetails
                 .FirstOrDefaultAsync(e => e.Id == TaskDetailId);
@@ -55,7 +55,7 @@ namespace TaskTrackingAPI.Data
             return null;
         }
 
-        public async Task DeleteTaskDetail(long TaskDetailId)
+        public async Task DeleteTaskDetail(int? TaskDetailId)
         {
             var result = await _context.TaskDetails
                 .FirstOrDefaultAsync(e => e.Id == TaskDetailId);

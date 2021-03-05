@@ -10,9 +10,9 @@ namespace TaskTrackingAPI.Data
     public interface ITaskRepository
     {
         Task<IEnumerable<TaskDetails>> GetTaskDetails();
-        Task<TaskDetails> GetTaskDetail(long taskId);
+        Task<TaskDetails> GetTaskDetail(int? taskId);
         Task<TaskDetails> AddTaskDetail(TaskDetails task);
         Task<TaskDetails> UpdateTaskDetail(TaskDetails task);
-        Task DeleteTaskDetail(long taskId);
+        Task DeleteTaskDetail(int? taskId);
     }
 }
