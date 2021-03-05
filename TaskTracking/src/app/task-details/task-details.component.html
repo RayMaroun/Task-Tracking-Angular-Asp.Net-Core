@@ -1,0 +1,31 @@
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Task Detail Register</h1>
+  </div>
+  <a (click)="addTask()" class="btn btn-sm btn-success mb-2">Add Task</a>
+  <div >
+  
+    <div >
+      <table class="table table-striped">
+        <thead class="thead-light">
+          <tr>
+            <th>Title</th>
+            <th>Details</th>
+            <th>AssigneeName</th>
+            <th>Date</th>
+            <th style="width: 10%"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let pd of service.list">
+            <td>{{pd.title}}</td>
+            <td>{{pd.details}}</td>
+            <td>{{pd.assigneeName}}</td>
+            <td>{{pd.date}}</td>
+            <td >
+              <button (click)="populateForm(pd)" class="btn btn-sm btn-primary">Edit</button>
+           </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

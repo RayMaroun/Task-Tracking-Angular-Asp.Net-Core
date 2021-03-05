@@ -1,0 +1,42 @@
+<div class="jumbotron py-3">
+    <h1 class="display-4 text-center">Task Detail Register</h1>
+  </div>
+
+<form novalidate autocomplete="off" #form="ngForm" (submit)="onSubmit(form)">
+    <input type="hidden" name="id" [value]="service.formData.id" />
+    <div class="form-group">
+        <label>Title</label>
+        <input class="form-control form-control-lg" placeholder="Title" name="title"
+            #title="ngModel" [(ngModel)]="service.formData.title"
+            required [class.invalid]="title.invalid && title.touched">
+    </div>
+
+    <div class="form-group">
+        <label>Details</label>
+        <input class="form-control form-control-lg" placeholder="Details" name="details"
+            #details="ngModel" [(ngModel)]="service.formData.details"
+            required [class.invalid]="details.invalid && details.touched">
+    </div>
+
+    <div class="form-group">
+        <label>Assignee Name</label>
+        <input class="form-control form-control-lg" placeholder="Assignee Name" name="assigneeName"
+            #assigneeName="ngModel" [(ngModel)]="service.formData.assigneeName"
+            required [class.invalid]="assigneeName.invalid && assigneeName.touched">
+    </div>
+
+
+    <div class="form-group">
+        <label>Date</label>
+        <input class="form-control form-control-lg" type="date" placeholder="Date" name="date"
+            #date="ngModel" [(ngModel)]="service.formData.date"
+            required [class.invalid]="date.invalid && date.touched">
+    </div>
+
+    <div class="form-group">
+        <button class="btn btn-info btn-lg btn-block" type="submit" [disabled]="form.invalid">SUBMIT</button>
+    </div>
+    <div *ngIf="service.formData.id" class="form-group">
+        <button class="btn btn-danger btn-lg btn-block" (click)="onDelete(service.formData.id,form)">DELETE</button>
+    </div>
+</form>
