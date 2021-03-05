@@ -8,6 +8,8 @@ This project is a simple but powerful web application to manage tasks.
 - REST API.
 - Repository Pattern.
 - Code First.
+- Domain-Drive Design
+- Entity Framework
 
 ## Requirements
 
@@ -21,6 +23,7 @@ This project is a simple but powerful web application to manage tasks.
 - .NET Core
 - SQL Server Express
 - Bootstrap
+- Entity Framework
 
 ## Set up
 
